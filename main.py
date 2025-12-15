@@ -48,6 +48,12 @@ def divisao():
     print("O resultado é: ", res)
     time.sleep(3)
 
+def raizQuadrada():
+    numero = lerNumero("Qual número deseja ver a raiz quadrada?: ")
+    res = numero ** 0.5
+    print("A raiz quadradada de", numero, "é", res)
+    time.sleep(2)
+
 def limparTerminal():
     os.system("cls" if os.name == "nt" else "clear")
 
@@ -58,9 +64,10 @@ while(continuar):
         print("2. Subtração")
         print("3. Multiplição")
         print("4. Divisão")
-        print("5. Sai")
+        print("5. Raiz quadrada")
+        print("6. Sai")
         operacao = input("Qual operação você deseja realizar?: ")
-        if operacao in ('1', '2', '3', '4', '5'):
+        if operacao in ('1', '2', '3', '4', '5', '6'):
             limparTerminal()
             break
         print("Por favor, digite uma opção valida")
@@ -71,7 +78,8 @@ while(continuar):
     if(operacao == '2'): subtracao()
     if(operacao == '3'): multiplicacao()
     if(operacao == '4'): divisao()
-    if(operacao == '5'): 
+    if(operacao == '5'): raizQuadrada()
+    if(operacao == '6'): 
         continuar = False
         continue
     limparTerminal()
